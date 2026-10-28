@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Nombre en la parte superior -->
+        <TextView
+            android:id="@+id/tvSaludo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Bienvenido/a!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchModoOscuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modo Oscuro "
+            android:layout_marginBottom="16dp" />
+
+        <!-- EditText para ingresar el nombre -->
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu nombre aquí para activar"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TextView Visor muestra la cantidad ingresada y el resultado -->
+        <TextView
+            android:id="@+id/tvVisor"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#E0E0E0"
+            android:gravity="end|center_vertical"
+            android:padding="16dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botones de Conversion (Deshabilitados por defecto) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnLongitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Metros ➔ Pies"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnPeso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Kg ➔ Libras"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnTemp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="°C ➔ °F"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Teclado numerico personalizado, usando GridLayout -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_marginBottom="16dp">
+
+            <Button android:id="@+id/btn7" android:text="7" android:textSize="25sp" />
+            <Button android:id="@+id/btn8" android:text="8" android:textSize="25sp" />
+            <Button android:id="@+id/btn9" android:text="9" android:textSize="25sp" />
+
+            <Button android:id="@+id/btn4" android:text="4" android:textSize="25sp" />
+            <Button android:id="@+id/btn5" android:text="5" android:textSize="25sp" />
+            <Button android:id="@+id/btn6" android:text="6" android:textSize="25sp" />
+
+            <Button android:id="@+id/btn1" android:text="1" android:textSize="25sp" />
+            <Button android:id="@+id/btn2" android:text="2" android:textSize="25sp" />
+            <Button android:id="@+id/btn3" android:text="3" android:textSize="25sp" />
+
+            <Button android:id="@+id/btnPunto" android:text="." android:textSize="25sp" />
+            <Button android:id="@+id/btn0" android:text="0" android:textSize="25sp" />
+            <Button android:id="@+id/btnReiniciar" android:text="C" android:textColor="#FF0000" android:textSize="25sp" />
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
